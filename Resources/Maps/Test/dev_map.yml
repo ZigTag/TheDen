@@ -1985,7 +1985,7 @@ entities:
     - type: Transform
       pos: 0.5,-4.5
       parent: 2709
-- proto: AirlockHydroponicsGlass
+- proto: AirlockHydroponicsLocked
   entities:
   - uid: 1062
     components:
@@ -9748,10 +9748,8 @@ entities:
           - 2189
           - 2190
           - 2191
-          - 2192
           - 2193
           - 2194
-          - 2195
           - 2196
           - 2197
           - 2198
@@ -11523,7 +11521,7 @@ entities:
     - type: Transform
       pos: 0.5,-1.5
       parent: 2709
-- proto: HolopadEngineeringMain
+- proto: HolopadEngineeringFront
   entities:
   - uid: 2692
     components:
@@ -12601,22 +12599,6 @@ entities:
     - type: Transform
       pos: 70.5,41
       parent: 1
-- proto: MetalFoamGrenade
-  entities:
-  - uid: 2192
-    components:
-    - type: Transform
-      parent: 2176
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 2195
-    components:
-    - type: Transform
-      parent: 2176
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: ModularGrenade
   entities:
   - uid: 2856
@@ -15611,13 +15593,6 @@ entities:
     components:
     - type: Transform
       pos: 72.5,-17.5
-      parent: 1
-- proto: SpawnMobCorgiMouse
-  entities:
-  - uid: 577
-    components:
-    - type: Transform
-      pos: 32.5,16.5
       parent: 1
 - proto: SpawnMobHuman
   entities:
