@@ -117,7 +117,7 @@ public sealed partial class ChatUIController : IOnSystemChanged<CharacterInfoSys
                 // Use `"` as layman symbol for Regex `\b`, ignore all other special sequences
                 // (Without that escape, a name like `Robert'); DROP TABLE users; --` breaks all messsages)
                 // Turn `\` into `\\` or else it'll escape the tags inside the actual chat message for reasons I can barely intuit but not explain.
-                _highlights.Add(WrapEscape(highlight.Replace(@"\", @"\\")).Replace("\"", "\\b")); // Den - dotnet builtins behaving oddly
+                _highlights.Add(WrapEscape(highlight.Replace(@"\", @"\\")).Replace("\"", "\\b")); // Den - dotnet builtins behaving oddly with roslyn (replaces Regex.Escape)
             }
         }
 
@@ -130,10 +130,10 @@ public sealed partial class ChatUIController : IOnSystemChanged<CharacterInfoSys
         _highlights.Sort((x, y) => y.Length.CompareTo(x.Length));
     }
 
-    // Den - dotnet builtins behaving oddly
+    // Den - dotnet builtins behaving oddly with roslyn (replaces Regex.Escape)
     private static string WrapEscape(string escape)
     {
-        // \, *, +, ?, |, {, [, (,), ^, $, ., #, and white spac
+        // Escapes \, *, +, ?, |, {, [, (,), ^, $, ., #, and white space
         return escape.Replace("\\", "\\\\").Replace("*", "\\*").Replace("+", "\\+").Replace("?", "\\?").Replace("|", "\\|").Replace("{", "\\{").Replace("[", "\\[").Replace("(", "\\(").Replace(")", "\\)").Replace("^", "\\^").Replace("$", "\\$").Replace(".", "\\.").Replace("#", "\\#").Replace(" ", "\\ ");
     }
 }
