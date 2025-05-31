@@ -4742,3 +4742,37 @@ Entries:
   id: 437
   time: '2025-05-30T19:11:32.0000000+00:00'
   url: https://github.com/TheDenSS14/TheDen/pull/616
+- author: portfiend
+  changes:
+    - type: Add
+      message: >-
+        Ported Delta-V species plushies (Felinid, Oni, Harpy, Rodentia, Feroxi,
+        Chitinid), courtesy of yours truly, with some special Den sauce to it
+  id: 438
+  time: '2025-05-31T01:41:48.0000000+00:00'
+  url: https://github.com/TheDenSS14/TheDen/pull/617
+- author: portfiend
+  changes:
+    - type: Add
+      message: >-
+        Eight different alien-themed markings: four pairs of eyes, three sets of
+        antennae, and a head overlay. Gneep gnorp
+  id: 439
+  time: '2025-05-31T09:38:47.0000000+00:00'
+  url: https://github.com/TheDenSS14/TheDen/pull/622
+- author: Rosycup
+  changes:
+    - type: Remove
+      message: Disabled the Ion damage type as well as all sources of it.
+  id: 440
+  time: '2025-05-31T09:39:21.0000000+00:00'
+  url: https://github.com/TheDenSS14/TheDen/pull/621
+- author: sleepyyapril
+  changes:
+    - type: Remove
+      message: >-
+        Removed Revenants as there is no current way for them to fit in with the
+        direction of The Den as they stand. Looking into replacements.
+  id: 441
+  time: '2025-05-31T09:39:43.0000000+00:00'
+  url: https://github.com/TheDenSS14/TheDen/pull/619
