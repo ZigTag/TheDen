@@ -52,12 +52,13 @@
   - type: Airtight
     noAirWhenFullyAirBlocked: false
   - type: Holofan # DeltaV - for whitelisting
-  - type: EmitSoundOnSpawn
-    sound:
-      path: /Audio/_DEN/holofan_sound.ogg
-      params:
-        maxDistance: 5
-        volume: 2
+  # TheDen - Disable for Delta Holofans
+  #- type: EmitSoundOnSpawn
+  #  sound:
+  #    path: /Audio/_DEN/holofan_sound.ogg
+  #    params:
+  #      maxDistance: 5
+  #      volume: 2
 
 - type: entity
   id: HolosignSecurity
