@@ -8,6 +8,8 @@ using Content.Shared.Storage;
 using Robust.Shared.Containers;
 using Robust.Shared.Map;
 using System.Linq;
+using Content.Shared.Sound;
+using Content.Shared.Sound.Components;
 
 namespace Content.Shared._DV.Holosign;
 
@@ -18,6 +20,7 @@ public sealed class ChargeHolosignSystem : EntitySystem
     [Dependency] private readonly SharedContainerSystem _container = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
+    [Dependency] private readonly SharedEmitSoundSystem _sound = default!;
 
     private HashSet<Entity<IComponent>> _signs = new();
 
@@ -88,6 +91,8 @@ public sealed class ChargeHolosignSystem : EntitySystem
         var placed = container.ContainedEntities.First(); // checked Count beforehand so this won't fail
         _transform.SetCoordinates(placed, coords);
         _transform.AnchorEntity(placed);
+        if (TryComp(placed, out SpamEmitSoundComponent? comp)) // TheDen - Holofan sounds
+            _sound.SetEnabled((placed, comp), true);
         return true;
     }
 
@@ -106,6 +111,8 @@ public sealed class ChargeHolosignSystem : EntitySystem
             return false;
         }
 
+        if (TryComp(sign, out SpamEmitSoundComponent? comp)) // TheDen - Holofan sounds
+            _sound.SetEnabled((sign, comp), false);
         _charges.AddCharges(ent, 1, ent);
 
         var userIdentity = Identity.Name(user, EntityManager);
