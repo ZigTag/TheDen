@@ -58,9 +58,19 @@
       points: 6
       required: true
       defaultMarkings: [ MobIPCHeadDefault ]
+    HeadTop:
+      points: 6
+      required: false
     Face:
       points: 6
       required: false
+    Snout:
+      points: 1
+      required: false
+    Tail:
+      points: 6
+      required: false
+
     Chest:
       points: 6
       required: true
