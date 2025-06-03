@@ -19,7 +19,7 @@ public sealed class SnoutHelmetSystem : EntitySystem
     private void OnComponentStartup(EntityUid uid, SnoutHelmetComponent component, ComponentStartup args)
     {
         if (TryComp(uid, out HumanoidAppearanceComponent? humanoidAppearanceComponent) &&
-            humanoidAppearanceComponent.ClientOldMarkings.Markings.TryGetValue(MarkingToQuery, out var markings) &&
+            humanoidAppearanceComponent.MarkingSet.Markings.TryGetValue(MarkingToQuery, out var markings) &&
             markings.Count > MaximumMarkingCount)
         {
             component.EnableAlternateHelmet = true;
