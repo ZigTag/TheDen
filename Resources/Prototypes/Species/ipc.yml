@@ -31,11 +31,12 @@
   sprites:
     Head: MobIPCHead
     Face: MobHumanoidAnyMarking
+    Snout: MobHumanoidAnyMarking
     HeadTop: MobHumanoidAnyMarking
     HeadSide: MobHumanoidAnyMarking
     Tail: MobHumanoidAnyMarking
-    Hair: MobHumanoidMarkingMatchSkin
-    FacialHair: MobHumanoidMarkingMatchSkin
+    Hair: MobHumanoidAnyMarking
+    FacialHair: MobHumanoidAnyMarking
     Eyes: MobHumanoidAnyMarking
     Chest: MobIPCTorso
     Underwear: MobHumanoidAnyMarking
