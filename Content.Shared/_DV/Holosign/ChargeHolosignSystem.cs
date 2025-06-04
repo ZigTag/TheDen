@@ -8,8 +8,10 @@ using Content.Shared.Storage;
 using Robust.Shared.Containers;
 using Robust.Shared.Map;
 using System.Linq;
+// Start TheDen - Add sounds to holofan
 using Content.Shared.Sound;
 using Content.Shared.Sound.Components;
+// End TheDen
 
 namespace Content.Shared._DV.Holosign;
 
