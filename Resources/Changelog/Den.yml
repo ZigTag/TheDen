@@ -4945,3 +4945,64 @@ Entries:
   id: 458
   time: '2025-06-03T00:16:58.0000000+00:00'
   url: https://github.com/TheDenSS14/TheDen/pull/646
+- author: juniwoofs
+  changes:
+    - type: Fix
+      message: Fixed Various Baikal issues
+  id: 459
+  time: '2025-06-03T04:15:59.0000000+00:00'
+  url: https://github.com/TheDenSS14/TheDen/pull/654
+- author: portfiend
+  changes:
+    - type: Tweak
+      message: >-
+        All Physical traits are now divided into four subcategories: Feats,
+        Disabilities, Biological, and Augmentations.
+  id: 460
+  time: '2025-06-03T04:17:46.0000000+00:00'
+  url: https://github.com/TheDenSS14/TheDen/pull/641
+- author: BlitzTheSquishy
+  changes:
+    - type: Tweak
+      message: .30 rifle does more damage than .20 rifle now
+  id: 461
+  time: '2025-06-03T04:18:03.0000000+00:00'
+  url: https://github.com/TheDenSS14/TheDen/pull/653
+- author: BlitzTheSquishy
+  changes:
+    - type: Tweak
+      message: .50 Shell renamed to 12 gauge for better clarity
+    - type: Tweak
+      message: >-
+        Incendiary shells are now dragons breath for a little bit more accuracy
+        (insert john wick reference here)
+  id: 462
+  time: '2025-06-03T04:18:58.0000000+00:00'
+  url: https://github.com/TheDenSS14/TheDen/pull/651
+- author: portfiend
+  changes:
+    - type: Add
+      message: New "fishing" guidebook entry. Now you can learn to fish too!
+    - type: Tweak
+      message: >-
+        Mildly reorganized the guidebook - moved some articles into relevant
+        categories, reordered some article lists.
+  id: 463
+  time: '2025-06-03T04:20:35.0000000+00:00'
+  url: https://github.com/TheDenSS14/TheDen/pull/642
+- author: BlitzTheSquishy
+  changes:
+    - type: Add
+      message: Feroxi names list finally ported
+  id: 464
+  time: '2025-06-03T05:22:07.0000000+00:00'
+  url: https://github.com/TheDenSS14/TheDen/pull/595
+- author: GreggTheFather
+  changes:
+    - type: Add
+      message: Added various QOL changes for Asterisk and Tortuga
+    - type: Fix
+      message: Fixed some Baikal APCs
+  id: 465
+  time: '2025-06-03T12:36:14.0000000+00:00'
+  url: https://github.com/TheDenSS14/TheDen/pull/655
