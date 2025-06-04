@@ -142,3 +142,6 @@ marking-SyntheticLizardLFoot-synth_lizard_l_foot = Primary
 # Tail
 marking-SynthLizardTail = Synth Lizard Tail
 marking-SynthLizardTail-synth_lizard_tail = Primary
+
+marking-SynthLizardTailAnimated = Synth Lizard Tail (wag)
+marking-SynthLizardTailAnimated-synth_lizard_tail_wag = Primary
