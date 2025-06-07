@@ -20,6 +20,9 @@ using Robust.Shared.Utility;
 using Content.Shared.CCVar;
 using Content.Shared.PowerCell.Components;
 using Content.Shared.Alert;
+using Content.Shared.Movement.Components;
+using Robust.Shared.Physics.Components;
+
 
 namespace Content.Server.Silicon.Charge;
 
@@ -105,6 +108,22 @@ public sealed class SiliconChargeSystem : EntitySystem
                 continue;
 
             var drainRate = siliconComp.DrainPerSecond;
+
+            // Calculate dynamic power draw.
+            if (TryComp(silicon, out MovementSpeedModifierComponent? movement) && TryComp(silicon, out PhysicsComponent? physics) && TryComp(silicon, out InputMoverComponent? input))
+            {
+                if (input.HeldMoveButtons == 0x0) // If nothing is being held
+                {
+                    drainRate = siliconComp.DrainPerSecond * 0.1f; // 1/10th rate per second
+                }
+                else
+                {
+                    drainRate = Math.Max(
+                        siliconComp.DrainPerSecond *
+                        (physics.LinearVelocity.Length() / movement.CurrentSprintSpeed), // Percentage of the movement
+                        siliconComp.DrainPerSecond * 0.1f); // Minimum power draw
+                }
+            }
 
             // All multipliers will be subtracted by 1, and then added together, and then multiplied by the drain rate. This is then added to the base drain rate.
             // This is to stop exponential increases, while still allowing for less-than-one multipliers.
