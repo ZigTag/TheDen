@@ -109,22 +109,6 @@ public sealed class SiliconChargeSystem : EntitySystem
 
             var drainRate = siliconComp.DrainPerSecond;
 
-            // Calculate dynamic power draw.
-            if (TryComp(silicon, out MovementSpeedModifierComponent? movement) && TryComp(silicon, out PhysicsComponent? physics) && TryComp(silicon, out InputMoverComponent? input))
-            {
-                if (input.HeldMoveButtons == 0x0) // If nothing is being held
-                {
-                    drainRate = siliconComp.DrainPerSecond * 0.1f; // 1/10th rate per second
-                }
-                else
-                {
-                    drainRate = Math.Max(
-                        siliconComp.DrainPerSecond *
-                        (physics.LinearVelocity.Length() / movement.CurrentSprintSpeed), // Percentage of the movement
-                        siliconComp.DrainPerSecond * 0.1f); // Minimum power draw
-                }
-            }
-
             // All multipliers will be subtracted by 1, and then added together, and then multiplied by the drain rate. This is then added to the base drain rate.
             // This is to stop exponential increases, while still allowing for less-than-one multipliers.
             var drainRateFinalAddi = 0f;
@@ -133,8 +117,10 @@ public sealed class SiliconChargeSystem : EntitySystem
             // Maybe use something similar to refreshmovespeedmodifiers, where it's stored in the component.
             // Maybe it doesn't matter, and stuff should just use static drain?
             if (!siliconComp.EntityType.Equals(SiliconType.Npc)) // Don't bother checking heat if it's an NPC. It's a waste of time, and it'd be delayed due to the update time.
+            {
                 drainRateFinalAddi += SiliconHeatEffects(silicon, siliconComp, frameTime) - 1; // This will need to be changed at some point if we allow external batteries, since the heat of the Silicon might not be applicable.
-
+                drainRateFinalAddi -= SiliconMovementEffects(silicon, siliconComp);
+            }
             // Ensures that the drain rate is at least 10% of normal,
             // and would allow at least 4 minutes of life with a max charge, to prevent cheese.
             drainRate += Math.Clamp(drainRateFinalAddi, drainRate * -0.9f, batteryComp.MaxCharge / 240);
@@ -212,5 +198,26 @@ public sealed class SiliconChargeSystem : EntitySystem
             return 0.5f + temperComp.CurrentTemperature / thermalComp.NormalBodyTemperature * 0.5f;
 
         return 0;
+    }
+
+    private float SiliconMovementEffects(EntityUid silicon, SiliconComponent siliconComp)
+    {
+        const float maxReductionAmount = 0.7f;
+
+        // Calculate dynamic power draw.
+        if (!TryComp(silicon, out MovementSpeedModifierComponent? movement) ||
+            !TryComp(silicon, out PhysicsComponent? physics) || !TryComp(silicon, out InputMoverComponent? input))
+            return 0;
+
+        if (input.HeldMoveButtons == 0x0) // If nothing is being held
+        {
+            return siliconComp.DrainPerSecond * maxReductionAmount; // Reduces draw by 90%
+        }
+
+        // LinearVelocity is relative to the parent
+        return Math.Clamp(
+            siliconComp.DrainPerSecond * (1 - (physics.LinearVelocity.Length() / movement.CurrentSprintSpeed)), // Power draw changes as a percentage of the movement
+            0f, // Maximum is 100% Power Draw
+            siliconComp.DrainPerSecond * maxReductionAmount); // Should be a minimum of 90% of reduction
     }
 }
