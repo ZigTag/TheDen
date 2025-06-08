@@ -202,7 +202,7 @@ public sealed class SiliconChargeSystem : EntitySystem
 
     private float SiliconMovementEffects(EntityUid silicon, SiliconComponent siliconComp)
     {
-        const float maxReductionAmount = 0.7f;
+        const float maxReductionAmount = 0.6f;
 
         // Calculate dynamic power draw.
         if (!TryComp(silicon, out MovementSpeedModifierComponent? movement) ||
