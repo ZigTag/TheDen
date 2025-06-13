@@ -1,6 +1,7 @@
 using System.Globalization;
 using System.Linq;
 using System.Numerics;
+using Content.Client._Shitcode.UserActions;
 using Content.Client.Administration.Managers;
 using Content.Client.Chat;
 using Content.Client.Chat.Managers;
@@ -12,6 +13,7 @@ using Content.Client.Ghost;
 using Content.Client.Mind;
 using Content.Client.Roles;
 using Content.Client.Stylesheets;
+using Content.Client.UserInterface.ControlExtensions;
 using Content.Client.UserInterface.Screens;
 using Content.Client.UserInterface.Systems.Chat.Widgets;
 using Content.Client.UserInterface.Systems.Gameplay;
@@ -278,6 +280,18 @@ public sealed partial class ChatUIController : UIController
     private void SetChatWindowOpacity(float opacity)
     {
         var chatBox = UIManager.ActiveScreen?.GetWidget<ChatBox>() ?? UIManager.ActiveScreen?.GetWidget<ResizableChatBox>();
+
+        var splitPanelContainer = UIManager.ActiveScreen?.FindControl<PanelContainer>("SidebarPanelContainer");
+
+        if (splitPanelContainer is { PanelOverride: StyleBoxFlat panelStyleBoxFlat, })
+        {
+            var panelColor = panelStyleBoxFlat.BackgroundColor;
+
+            splitPanelContainer.PanelOverride = new StyleBoxFlat()
+            {
+                BackgroundColor = panelColor.WithAlpha(opacity)
+            };
+        }
 
         var panel = chatBox?.ChatWindowPanel;
         if (panel is null)

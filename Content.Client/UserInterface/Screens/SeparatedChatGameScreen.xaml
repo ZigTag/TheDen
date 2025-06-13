@@ -29,7 +29,7 @@
             </BoxContainer>
             <alerts:AlertsUI Name="Alerts" Access="Protected" />
         </LayoutContainer>
-        <PanelContainer HorizontalExpand="True" MinWidth="300">
+        <PanelContainer Name="SidebarPanelContainer" HorizontalExpand="True" MinWidth="300">
             <PanelContainer.PanelOverride>
                 <graphics:StyleBoxFlat BackgroundColor="#2B2C3B" />
             </PanelContainer.PanelOverride>
