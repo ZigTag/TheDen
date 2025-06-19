@@ -1060,6 +1060,14 @@
       group: LoadoutWritables
 
 - type: loadout
+  id: PlushieNuke
+  category: GeneralToys
+  cost: 1
+  canBeHeirloom: true
+  items:
+    - PlushieNuke
+
+- type: loadout
   id: PlushieSharkBlue
   category: GeneralToys
   cost: 1
