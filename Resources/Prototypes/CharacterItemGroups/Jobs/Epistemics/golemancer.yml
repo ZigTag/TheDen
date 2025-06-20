@@ -39,10 +39,12 @@
     - type: loadout
       id: LoadoutGolemancerPillCanisterSpaceDrugs
 
-#- type: characterItemGroup
-#  id: LoadoutGolemancerEyes
-#  maxItems: 1
-#  items:
+- type: characterItemGroup
+  id: LoadoutGolemancerEyes
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutGolemancerEyesMeson
 
 - type: characterItemGroup # TheDen
   id: LoadoutGolemancerGloves

@@ -97,6 +97,19 @@
     - PillCanisterSpaceDrugs
 
 # Eyes
+- type: loadout
+  id: LoadoutGolemancerEyesMeson
+  category: JobsEpistemicsGolemancer
+  cost: 1
+  exclusive: true
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutGolemancerEquipment
+  - !type:CharacterJobRequirement
+    jobs:
+    - Roboticist
+  items:
+  - ClothingEyesGlassesMeson
 
 # Gloves
 
