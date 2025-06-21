@@ -42,6 +42,7 @@ using System.Linq;
 using Content.Server._DEN.Vocal;
 using Content.Shared.Chat.Prototypes;
 using Content.Shared.Humanoid;
+using Content.Shared.Movement.Components;
 using Content.Shared.Speech;
 using Robust.Shared.Utility;
 using Robust.Shared.GameStates;
@@ -834,7 +835,6 @@ public sealed partial class TraitCyberneticLimbReplacement : TraitFunction
         ISerializationManager serializationManager)
     {
         var bodySystem = entityManager.System<BodySystem>();
-        var transformSystem = entityManager.System<SharedTransformSystem>();
 
         if (!entityManager.TryGetComponent(uid, out BodyComponent? body)
             || !entityManager.TryGetComponent(uid, out TransformComponent? xform)
@@ -852,16 +852,26 @@ public sealed partial class TraitCyberneticLimbReplacement : TraitFunction
             if (partComp.Symmetry != PartSymmetry)
                 continue;
 
-            foreach (var child in bodySystem.GetBodyPartChildren(part.Id, part.Component))
-                entityManager.QueueDeleteEntity(child.Id);
-
-            transformSystem.AttachToGridOrMap(part.Id);
-            entityManager.QueueDeleteEntity(part.Id);
-
             var newLimb = entityManager.SpawnAtPosition(ProtoId, xform.Coordinates);
+
             if (entityManager.TryGetComponent(newLimb, out BodyPartComponent? limbComp))
-                bodySystem.AttachPart(root.Value.Entity, SlotId, newLimb, root.Value.BodyPart, limbComp);
+            {
+                part.Component.OnAdd = limbComp.OnAdd;
+
+                // Have to handle on add manually
+                if (part.Component.OnAdd != null)
+                    entityManager.AddComponents(uid, part.Component.OnAdd);
+
+                if (entityManager.TryGetComponent(newLimb, out MovementBodyPartComponent? movementComp))
+                    entityManager.CopyComponent(newLimb, part.Id, movementComp);
+            }
+
+            foreach (var child in bodySystem.GetBodyPartChildren(newLimb, limbComp))
+                entityManager.QueueDeleteEntity(child.Id);
         }
+
+        bodySystem.UpdateMovementSpeed(uid, body);
+        entityManager.Dirty(uid, body);
     }
 }
 

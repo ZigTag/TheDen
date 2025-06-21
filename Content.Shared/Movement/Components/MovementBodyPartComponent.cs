@@ -9,15 +9,15 @@ using Robust.Shared.GameStates;
 
 namespace Content.Shared.Movement.Components;
 
-[RegisterComponent, NetworkedComponent]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class MovementBodyPartComponent : Component
 {
-    [DataField("walkSpeed")]
+    [DataField("walkSpeed"), AutoNetworkedField]
     public float WalkSpeed = MovementSpeedModifierComponent.DefaultBaseWalkSpeed;
 
-    [DataField("sprintSpeed")]
+    [DataField("sprintSpeed"), AutoNetworkedField]
     public float SprintSpeed = MovementSpeedModifierComponent.DefaultBaseSprintSpeed;
 
-    [DataField("acceleration")]
+    [DataField("acceleration"), AutoNetworkedField]
     public float Acceleration = MovementSpeedModifierComponent.DefaultAcceleration;
 }
