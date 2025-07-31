@@ -94,9 +94,9 @@
       - state: equipped-OUTERCLOTHING-sealed
   - type: ExplosionResistance
     damageCoefficient: 0.4
-  - type: ModifyDelayedKnockdown
-    delayDelta: 2
-    knockdownTimeDelta: -2
+#  - type: ModifyDelayedKnockdown
+#    delayDelta: 2
+#    knockdownTimeDelta: -2
   - type: StaminaDamageResistance
     coefficient: 0.7
   - type: Armor
@@ -151,9 +151,9 @@
       - state: equipped-OUTERCLOTHING-sealed
   - type: ExplosionResistance
     damageCoefficient: 0.4
-  - type: ModifyDelayedKnockdown
-    delayDelta: 3
-    knockdownTimeDelta: -3
+#  - type: ModifyDelayedKnockdown
+#    delayDelta: 3
+#    knockdownTimeDelta: -3
   - type: StaminaDamageResistance
     coefficient: 0.7
   - type: Armor
@@ -225,9 +225,9 @@
     - type: TemperatureProtection
       coolingCoefficient: 0.1
       heatingCoefficient: 0.4
-  - type: ModifyDelayedKnockdown
-    delayDelta: 1
-    knockdownTimeDelta: -1
+#  - type: ModifyDelayedKnockdown
+#    delayDelta: 1
+#    knockdownTimeDelta: -1
   - type: StaminaDamageResistance
     coefficient: 0.9
   - type: FireProtection
@@ -283,9 +283,9 @@
     - type: TemperatureProtection
       coolingCoefficient: 0.1
       heatingCoefficient: 0.4
-  - type: ModifyDelayedKnockdown # Goobstation
-    delayDelta: 1
-    knockdownTimeDelta: -1
+#  - type: ModifyDelayedKnockdown # Goobstation
+#    delayDelta: 1
+#    knockdownTimeDelta: -1
   - type: StaminaDamageResistance
     coefficient: 0.9
   - type: FireProtection
@@ -339,9 +339,9 @@
     - type: TemperatureProtection
       coolingCoefficient: 0.1
       heatingCoefficient: 0.4
-  - type: ModifyDelayedKnockdown # Goobstation
-    delayDelta: 1
-    knockdownTimeDelta: -1
+#  - type: ModifyDelayedKnockdown # Goobstation
+#    delayDelta: 1
+#    knockdownTimeDelta: -1
   - type: StaminaDamageResistance
     coefficient: 0.9
   - type: FireProtection
@@ -397,9 +397,9 @@
     - type: TemperatureProtection
       coolingCoefficient: 0.1
       heatingCoefficient: 0.4
-  - type: ModifyDelayedKnockdown
-    delayDelta: 3
-    knockdownTimeDelta: -3
+#  - type: ModifyDelayedKnockdown
+#    delayDelta: 3
+#    knockdownTimeDelta: -3
   - type: StaminaDamageResistance
     coefficient: 0.9
   - type: FireProtection
@@ -453,9 +453,9 @@
     - type: TemperatureProtection
       coolingCoefficient: 0.1
       heatingCoefficient: 0.4
-  - type: ModifyDelayedKnockdown
-    delayDelta: 3
-    knockdownTimeDelta: -3
+#  - type: ModifyDelayedKnockdown
+#    delayDelta: 3
+#    knockdownTimeDelta: -3
   - type: StaminaDamageResistance
     coefficient: 0.7
   - type: FireProtection

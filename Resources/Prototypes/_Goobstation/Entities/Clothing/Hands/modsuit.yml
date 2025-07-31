@@ -29,10 +29,10 @@
     equipSound: /Audio/Mecha/mechmove03.ogg
     unequipSound: /Audio/Mecha/mechmove03.ogg
     slots: [ gloves ]
-  - type: DamageOnInteractProtection
-    damageProtection:
-      flatReductions:
-        Heat: 10
+#  - type: DamageOnInteractProtection
+#    damageProtection:
+#      flatReductions:
+#        Heat: 10
   - type: Insulated
   - type: Fiber
     fiberMaterial: fibers-modular
@@ -66,10 +66,10 @@
     equipSound: /Audio/Mecha/mechmove03.ogg
     unequipSound: /Audio/Mecha/mechmove03.ogg
     slots: [ gloves ]
-  - type: DamageOnInteractProtection
-    damageProtection:
-      flatReductions:
-        Heat: 10
+#  - type: DamageOnInteractProtection
+#    damageProtection:
+#      flatReductions:
+#        Heat: 10
   - type: Insulated
   - type: Fiber
     fiberMaterial: fibers-modular
@@ -102,10 +102,10 @@
     equipSound: /Audio/Mecha/mechmove03.ogg
     unequipSound: /Audio/Mecha/mechmove03.ogg
     slots: [ gloves ]
-  - type: DamageOnInteractProtection
-    damageProtection:
-      flatReductions:
-        Heat: 10
+#  - type: DamageOnInteractProtection
+#    damageProtection:
+#      flatReductions:
+#        Heat: 10
   - type: Insulated
   - type: Fiber
     fiberMaterial: fibers-modular
@@ -138,10 +138,10 @@
     equipSound: /Audio/Mecha/mechmove03.ogg
     unequipSound: /Audio/Mecha/mechmove03.ogg
     slots: [ gloves ]
-  - type: DamageOnInteractProtection
-    damageProtection:
-      flatReductions:
-        Heat: 10
+#  - type: DamageOnInteractProtection
+#    damageProtection:
+#      flatReductions:
+#        Heat: 10
   - type: Insulated
   - type: Fiber
     fiberMaterial: fibers-modular
@@ -174,10 +174,10 @@
     equipSound: /Audio/Mecha/mechmove03.ogg
     unequipSound: /Audio/Mecha/mechmove03.ogg
     slots: [ gloves ]
-  - type: DamageOnInteractProtection
-    damageProtection:
-      flatReductions:
-        Heat: 10
+#  - type: DamageOnInteractProtection
+#    damageProtection:
+#      flatReductions:
+#        Heat: 10
   - type: Insulated
   - type: Fiber
     fiberMaterial: fibers-modular
@@ -210,10 +210,10 @@
     equipSound: /Audio/Mecha/mechmove03.ogg
     unequipSound: /Audio/Mecha/mechmove03.ogg
     slots: [ gloves ]
-  - type: DamageOnInteractProtection
-    damageProtection:
-      flatReductions:
-        Heat: 10
+#  - type: DamageOnInteractProtection
+#    damageProtection:
+#      flatReductions:
+#        Heat: 10
   - type: Insulated
   - type: Fiber
     fiberMaterial: fibers-modular
@@ -246,10 +246,10 @@
     equipSound: /Audio/Mecha/mechmove03.ogg
     unequipSound: /Audio/Mecha/mechmove03.ogg
     slots: [ gloves ]
-  - type: DamageOnInteractProtection
-    damageProtection:
-      flatReductions:
-        Heat: 10
+#  - type: DamageOnInteractProtection
+#    damageProtection:
+#      flatReductions:
+#        Heat: 10
   - type: Insulated
   - type: Fiber
     fiberMaterial: fibers-modular
@@ -282,10 +282,10 @@
     equipSound: /Audio/Mecha/mechmove03.ogg
     unequipSound: /Audio/Mecha/mechmove03.ogg
     slots: [ gloves ]
-  - type: DamageOnInteractProtection
-    damageProtection:
-      flatReductions:
-        Heat: 10
+#  - type: DamageOnInteractProtection
+#    damageProtection:
+#      flatReductions:
+#        Heat: 10
   - type: Insulated
   - type: Fiber
     fiberMaterial: fibers-modular

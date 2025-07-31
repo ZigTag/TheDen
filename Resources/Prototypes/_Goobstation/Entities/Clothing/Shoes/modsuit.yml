@@ -80,8 +80,8 @@
     modifier: 0.5
   - type: ClothingModifyStunTime # Goobstation
     modifier: 0.8
-  - type: ModifyStandingUpTime # Goobstation
-    multiplier: 0.5
+#  - type: ModifyStandingUpTime # Goobstation
+#    multiplier: 0.5
 
 - type: entity
   parent: ClothingShoesBase
@@ -118,8 +118,8 @@
     modifier: 0.5
   - type: ClothingModifyStunTime # Goobstation
     modifier: 0.8
-  - type: ModifyStandingUpTime # Goobstation
-    multiplier: 0.5
+#  - type: ModifyStandingUpTime # Goobstation
+#    multiplier: 0.5
 
 - type: entity
   parent: ClothingShoesBase
