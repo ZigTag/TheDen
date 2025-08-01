@@ -1,0 +1,86 @@
+﻿## Hardsuit selectors
+
+# paramedic
+- type: selectableSet
+  id: VoidsuitSelectorParamedicVoidsuit
+  name: selectable-set-paramedic-voidsuit-name
+  description: selectable-set-paramedic-voidsuit-desc
+  sprite:
+    sprite: Clothing/OuterClothing/Hardsuits/paramed.rsi
+    state: icon
+  content:
+  - ClothingOuterHardsuitVoidParamed
+
+- type: selectableSet
+  id: VoidsuitSelectorParamedicModsuit
+  name: selectable-set-paramedic-modsuit-name
+  description: selectable-set-paramedic-modsuit-desc
+  sprite:
+    sprite: _Goobstation/Clothing/Back/Modsuits/paramedic.rsi
+    state: control
+  content:
+  - ClothingModsuitParamedicPowerCell
+
+# security
+- type: selectableSet
+  id: HardsuitSelectorSecurityHardsuit
+  name: selectable-set-security-hardsuit-name
+  description: selectable-set-security-hardsuit-desc
+  sprite:
+    sprite: _DV/Clothing/OuterClothing/Hardsuits/Combat/officer.rsi
+    state: icon
+  content:
+  - ClothingOuterHardsuitCombatOfficer # DeltaV - Replaced in original
+
+- type: selectableSet
+  id: HardsuitSelectorSecurityModsuit
+  name: selectable-set-security-modsuit-name
+  description: selectable-set-security-modsuit-desc
+  sprite:
+    sprite: _Goobstation/Clothing/Back/Modsuits/security.rsi
+    state: control
+  content:
+  - ClothingModsuitSecurityPowerCell
+
+# head of security
+- type: selectableSet
+  id: HardsuitSelectorHeadOfSecurityHardsuit
+  name: selectable-set-headofsecurity-hardsuit-name
+  description: selectable-set-headofsecurity-hardsuit-desc
+  sprite:
+    sprite: _DV/Clothing/OuterClothing/Hardsuits/Combat/hos.rsi
+    state: icon
+  content:
+  - ClothingOuterHardsuitCombatHoS # DeltaV - Replaced in original
+
+- type: selectableSet
+  id: HardsuitSelectorHeadOfSecurityModsuit
+  name: selectable-set-headofsecurity-modsuit-name
+  description: selectable-set-headofsecurity-modsuit-desc
+  sprite:
+    sprite: _Goobstation/Clothing/Back/Modsuits/headofsecurity.rsi
+    state: control
+  content:
+  - ClothingModsuitHeadOfSecurityPowerCell
+
+# engineer
+
+- type: selectableSet
+  id: HardsuitSelectorEngineerHardsuit
+  name: selectable-set-engineering-hardsuit-name
+  description: selectable-set-engineering-hardsuit-desc
+  sprite:
+    sprite: Clothing/OuterClothing/Hardsuits/engineering.rsi
+    state: icon
+  content:
+  - ClothingOuterHardsuitEngineering
+
+- type: selectableSet
+  id: HardsuitSelectorEngineerModsuit
+  name: selectable-set-engineering-modsuit-name
+  description: selectable-set-engineering-modsuit-desc
+  sprite:
+    sprite: _Goobstation/Clothing/Back/Modsuits/engineer.rsi
+    state: control
+  content:
+  - ClothingModsuitEngineerPowerCell

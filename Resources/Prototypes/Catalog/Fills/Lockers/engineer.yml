@@ -207,7 +207,7 @@
   id: FillAtmosphericsHardsuit
   table: !type:AllSelector
     children:
-    - id: ClothingOuterHardsuitAtmos
+    - id: ClothingModsuitAtmostechPowerCell # Goobstation
     - id: OxygenTankFilled
     - id: NitrogenTankFilled #Den
     - id: ClothingMaskBreath
@@ -261,7 +261,7 @@
   id: FillEngineerHardsuit
   table: !type:AllSelector
     children:
-    - id: ClothingOuterHardsuitEngineering
+    - id: UndeterminedHardsuitEngineer # Goobstation
     - id: OxygenTankFilled
     - id: NitrogenTankFilled #Den
     - id: ClothingShoesBootsMag

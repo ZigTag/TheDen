@@ -1,0 +1,64 @@
+# SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+# SPDX-FileCopyrightText: 2025 PunishedJoe <PunishedJoeseph@proton.me>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# paramedic
+- type: entity
+  id: UndeterminedVoidsuitParamedic
+  name: paramedic voidsuit selector
+  description: A small remote utilizing bluespace technology to drop in a voidsuit or modsuit of your choosing.
+  parent: [ BaseItem, BaseSetSelector ]
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Objects/Devices/unique_teleporters.rsi
+    state: standard
+  - type: SetSelector
+    possibleSets:
+    - VoidsuitSelectorParamedicVoidsuit
+    - VoidsuitSelectorParamedicModsuit
+
+# security
+- type: entity
+  id: UndeterminedHardsuitSecurity
+  name: security hardsuit selector
+  description: A small remote utilizing bluespace technology to drop in a hardsuit or modsuit of your choosing.
+  parent: [ BaseItem, BaseSetSelector ]
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Objects/Devices/unique_teleporters.rsi
+    state: standard
+  - type: SetSelector
+    possibleSets:
+    - HardsuitSelectorSecurityHardsuit
+    - HardsuitSelectorSecurityModsuit
+
+# head of security
+- type: entity
+  id: UndeterminedHardsuitHeadOfSecurity
+  name: head of security hardsuit selector
+  description: A small remote utilizing bluespace technology to drop in a hardsuit or modsuit of your choosing.
+  parent: [ BaseItem, BaseSetSelector ]
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Objects/Devices/unique_teleporters.rsi
+    state: standard
+  - type: SetSelector
+    possibleSets:
+    - HardsuitSelectorHeadOfSecurityHardsuit
+    - HardsuitSelectorHeadOfSecurityModsuit
+
+# engineer
+- type: entity
+  id: UndeterminedHardsuitEngineer
+  name: engineer hardsuit selector
+  description: A small remote utilizing bluespace technology to drop in a hardsuit or modsuit of your choosing.
+  parent: [ BaseItem, BaseSetSelector ]
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Objects/Devices/unique_teleporters.rsi
+    state: standard
+  - type: SetSelector
+    possibleSets:
+    - HardsuitSelectorEngineerHardsuit
+    - HardsuitSelectorEngineerModsuit

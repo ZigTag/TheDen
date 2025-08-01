@@ -409,7 +409,7 @@
       - id: ClothingOuterCoatHoSTrench
       - id: ClothingLongcoatHoS # Floofstation
       - id: ClothingMaskNeckGaiter
-      - id: ClothingOuterHardsuitCombatHoS # DeltaV - ClothingOuterHardsuitSecurityRed replaced in favour of head of security's advanced combat hardsuit.
+      - id: UndeterminedHardsuitHeadOfSecurity # Goobstation
       - id: OxygenTankFilled #Den
       - id: NitrogenTankFilled #Den
       - id: ClothingBeltSecurityFilled

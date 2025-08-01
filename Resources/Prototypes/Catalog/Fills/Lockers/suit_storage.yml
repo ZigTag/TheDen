@@ -165,7 +165,7 @@
           amount: 2 #DeltaV - Double the tanks
         - id: NitrogenTankFilled #Den
           amount: 2
-        - id: ClothingOuterHardsuitCombatOfficer # DeltaV - ClothingOuterHardsuitSecurity replaced in favour of security combat hardsuit.
+        - id: UndeterminedHardsuitSecurity # Goobstation
           amount: 2 #DeltaV - Double the suits
         - id: ClothingMaskBreath
           amount: 2 #Delta-V Double the masks
@@ -230,7 +230,7 @@
         - id: OxygenTankFilled
         - id: NitrogenTankFilled #Den
         - id: JetpackSecurityFilled
-        - id: ClothingOuterHardsuitCombatHoS # DeltaV - ClothingOuterHardsuitSecurityRed replaced in favour of head of security's advanced combat hardsuit.
+        - id: UndeterminedHardsuitHeadOfSecurity # Goobstation
         - id: ClothingMaskGasSwat
   - type: AccessReader
     access: [["HeadOfSecurity"]]
@@ -293,7 +293,7 @@
     contents:
         - id: NitrogenTankFilled
         - id: OxygenTankFilled
-        - id: ClothingOuterHardsuitVoidParamed
+        - id: UndeterminedVoidsuitParamedic
         - id: ClothingMaskBreathMedical
         - id: ClothingShoesBootsMagParamed # The Den
   - type: AccessReader
